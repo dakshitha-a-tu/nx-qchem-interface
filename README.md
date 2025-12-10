@@ -86,14 +86,13 @@ H  0.758602  0.000000  0.504284
 H  0.758602  0.000000  -0.504284
 $end
 
-$rem  
-JOBTYPE             FORCE  
+$rem   
 METHOD              EOM-CCSD  
 BASIS               cc-pVDZ  
 IP_STATES           [3]  
 CC_STATE_TO_OPT     [1,3]  
 CALC_NAC            2  
-...  
+!...  
 $end
 ```
 
