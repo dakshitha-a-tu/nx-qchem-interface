@@ -1,0 +1,11 @@
+Time =      0.00   Threshold=   0.5   PES = 3   DE_inf =  1.49   DE_sup = -----   Type = 1   Next type = 1
+Time =      0.50   Threshold=   0.5   PES = 3   DE_inf =  1.47   DE_sup = -----   Type = 1   Next type = 1
+Time =      1.00   Threshold=   0.5   PES = 3   DE_inf =  1.41   DE_sup = -----   Type = 1   Next type = 1
+Time =      1.50   Threshold=   0.5   PES = 3   DE_inf =  1.28   DE_sup = -----   Type = 1   Next type = 1
+Time =      2.00   Threshold=   0.5   PES = 3   DE_inf =  1.08   DE_sup = -----   Type = 1   Next type = 1
+Time =      2.50   Threshold=   0.5   PES = 3   DE_inf =  0.79   DE_sup = -----   Type = 1   Next type = 1
+Time =      3.00   Threshold=   0.5   PES = 3   DE_inf =  0.44   DE_sup = -----   Type = 1   Next type = 2
+Time =      3.50   Threshold=   0.5   PES = 3   DE_inf =  0.24   DE_sup = -----   Type = 2   Next type = 2
+Time =      4.00   Threshold=   0.5   PES = 3   DE_inf =  0.48   DE_sup = -----   Type = 2   Next type = 2
+Time =      4.50   Threshold=   0.5   PES = 3   DE_inf =  0.72   DE_sup = -----   Type = 2   Next type = 1
+Time =      5.00   Threshold=   0.5   PES = 3   DE_inf =  0.84   DE_sup = -----   Type = 1   Next type = 1

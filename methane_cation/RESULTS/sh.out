@@ -1,0 +1,80 @@
+ -----------------------
+   integrator =       5
+   phase      =       1
+   nohop      =       0
+   forcesurf  =       1
+   getphase   =       1
+   nrelax     =       0
+   vdoth      =     0.0
+   tully      =       1
+   ms         =      20
+   mom        =       1
+   seed       =       1
+   adjmom     =    0.00
+   probmin    =  0.0000
+   popdev     =   0.050
+   decohmod   =       1
+   decay      =  0.1000
+   decovlp    = -1.0000
+   thrwp      =  0.1000D-02
+   iatau      =       1
+   run_complex=       0
+ -----------------------
+|v.h|=     0.000000   -0.000068   -0.000773
+Integration of the TDSH for the electrons
+Integrator = 5          Hopping is allowed    
+  substep     step  surf      Total pop
+        0        0     3    1.000000000
+Population:     1    0.000000000
+Population:     2    0.000000000
+Population:     3    1.000000000
+|v.h|=     0.000000   -0.000066   -0.000767
+        1        1     3    1.000000000
+Population:     1    0.000000005
+Population:     2    0.000000628
+Population:     3    0.999999367
+|v.h|=     0.000000   -0.000028   -0.000695
+       21        2     3    1.000000000
+Population:     1    0.000000462
+Population:     2    0.000208206
+Population:     3    0.999791331
+|v.h|=     0.000000    0.000011   -0.000494
+       41        3     3    1.000000000
+Population:     1    0.000000282
+Population:     2    0.000446258
+Population:     3    0.999553460
+|v.h|=     0.000000    0.000063   -0.000286
+       61        4     3    1.000000000
+Population:     1    0.000000077
+Population:     2    0.000430686
+Population:     3    0.999569236
+|v.h|=     0.000000    0.000134   -0.000086
+       81        5     3    1.000000000
+Population:     1    0.000001377
+Population:     2    0.000317762
+Population:     3    0.999680861
+|v.h|=     0.000000    0.000220    0.000450
+      101        6     3    1.000000000
+Population:     1    0.000003699
+Population:     2    0.000396071
+Population:     3    0.999600230
+|v.h|=     0.000000    0.000288    0.002791
+      121        7     3    1.000000000
+Population:     1    0.000004583
+Population:     2    0.003001512
+Population:     3    0.996993905
+|v.h|=     0.000000    0.001136   -0.002999
+      141        8     3    1.000000000
+Population:     1    0.000120433
+Population:     2    0.002248703
+Population:     3    0.997630864
+|v.h|=     0.000000    0.000241    0.000386
+      161        9     3    1.000000000
+Population:     1    0.000187166
+Population:     2    0.000998183
+Population:     3    0.998814650
+|v.h|=     0.000000   -0.000169    0.000422
+      181       10     3    1.000000000
+Population:     1    0.000131713
+Population:     2    0.000935714
+Population:     3    0.998932573
