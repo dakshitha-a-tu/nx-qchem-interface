@@ -31,7 +31,7 @@ Before using the script, you must configure NewtonX to recognize it as a valid p
    
    ```perl
    if (($prog >= 21.95) and ($prog < 22.05)){  
-          %progconf=(progname      = "qchem",  
+          %progconf=(progname      => "qchem",  
                      methodname => "qchem",  
                      ic         => "y",  
                      dyn        => "y",  
