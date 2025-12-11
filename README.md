@@ -26,7 +26,7 @@ This interface has been tested and is confirmed to work with the following softw
 
 Before using the script, you must configure NewtonX to recognize it as a valid program interface.
 
-1. **Locate colib\_perl.pm:** Open the colib\_perl.pm file, which is located at $NX/../lib/colib\_perl.pm, where $NX is the environment variable pointing to your NewtonX installation's bin directory.  
+1. **Locate colib\_perl.pm:** Open the colib\_perl.pm file, which is located at $NX/lib/colib\_perl.pm, where $NX is the environment variable pointing to your NewtonX installation's bin directory.  
 2. **Add Program Definition:** Add the following Perl code block to the colib\_perl.pm file. This defines "program 22.0" as the Q-Chem interface.
    
    ```perl
@@ -68,7 +68,7 @@ To start a non-adiabatic dynamics simulation, you need to set up a trajectory di
    ├── sh.inp           # Surface hopping parameters    
    ├── geom             # Initial geometry (in Bohr)    
    ├── veloc            # Initial velocities (in atomic units)    
-   └── JOB\_NAD/        # Directory for non-adiabatic calculations    
+   └── JOB_NAD/         # Directory for non-adiabatic calculations    
        └── qchem.inp    # Q-Chem input template
    ```
 
