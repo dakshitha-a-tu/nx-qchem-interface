@@ -1,5 +1,3 @@
-#!/usr/bin/env perl
-#
 #====================================================================================
 #
 # Interface between Q-Chem and NewtonX
@@ -735,4 +733,5 @@ sub adjust_phase {
     copy( "nadv", "nad_vectors" ) or die "Copy failed: $!";
 
     if ( $lvprt >= 3 ) { copy( "escalar.log", "../$DEBUG/." ) or die "Copy failed: $!"; }
+
 }
