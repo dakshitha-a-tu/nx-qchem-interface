@@ -79,7 +79,7 @@ To start a non-adiabatic dynamics simulation, you need to set up a trajectory di
 
 ```prog = 22.0```
 
-3. **Directory Structure:** Your trajectory directory (e.g., `TRAJ1`) must contain the following files and subdirectories:
+2. **Directory Structure:** Your trajectory directory (e.g., `TRAJ1`) must contain the following files and subdirectories:
 
 ```
 TRAJ1/    
