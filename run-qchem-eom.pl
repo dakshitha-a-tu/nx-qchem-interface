@@ -23,9 +23,18 @@ use File::Path qw(make_path);
 use lib join( '/', $ENV{"NX"}, "lib" );
 use colib_perl;
 
+# ===================================================================================
+# SCRIPT PARAMETERS
+# ===================================================================================
+my $archive_outputs  = 1; # Set to 1 to enable archiving Q-Chem outputs, 0 to disable
+my $archive_interval = 1; # Archive every n timesteps (e.g., 1 = every step, 5 = every 5th step)
+my $nt               = 4; # Number of threads for Q-Chem
+my $print_extracted  = 1; # Set to 1 to print extracted data to STDOUT, 0 to suppress
+# ===================================================================================
+
 # We are using "strict." Thus, all variables must be declared.
 my ( $mld, $mdle, $BASEDIR, $DEBUG, $JAD, $JND, $ctd, $fpar );
-my ( $nt, $qchem_template, $qchem_inp, $qchem_out, $print_extracted );
+my ( $qchem_template, $qchem_inp, $qchem_out );
 my ( $nat, $istep, $nstat, $nstatdyn, $ndamp, $kt, $dt, $t, $tmax, $nintc );
 my ( $nxrestart, $thres, $killstat, $timekill, $prog, $lvprt, $etot_jump, $etot_drift );
 my ( @symb, @zn, @x, @y, @z, @Mass, $ia );
@@ -64,7 +73,7 @@ treat_nacme();
 #
 #====================================================================================
 #
-#                               START SUBROUTINES
+#                                START SUBROUTINES
 #
 #====================================================================================
 #
@@ -78,8 +87,6 @@ sub define_variables {
     #------------------------------------------------------------------------------------
     #
 
-    $nt              = 4; # number of threads for qchem
-    $print_extracted = 1;  # Set to 1 to print extracted data, 0 to suppress
     $mld             = $ENV{"NX"};
     $mdle            = "run-qchem-eom.pl:";
     $qchem_template  = "JOB_NAD/qchem.inp";
@@ -287,13 +294,15 @@ sub run_program {
         die;
     }
 
-    # Archive the output file from the current step
-    my $archive_dir = "../INFO_RESTART/qchem_outputs";
-    make_path($archive_dir) unless -d $archive_dir;
-    my $dest_file = "$archive_dir/$t.out";
-    copy($qchem_out, $dest_file) or die "Failed to copy $qchem_out to $dest_file: $!";
-    if ($lvprt >= 3) {
-        print_STDOUT("$mdle Archived current output to $dest_file\n", $istep, $kt);
+    # Archive the output file from the current step if enabled and on the correct interval
+    if ( $archive_outputs && ( $istep % $archive_interval == 0 ) ) {
+        my $archive_dir = "../INFO_RESTART/qchem_outputs";
+        make_path($archive_dir) unless -d $archive_dir;
+        my $dest_file = "$archive_dir/$t.out";
+        copy($qchem_out, $dest_file) or die "Failed to copy $qchem_out to $dest_file: $!";
+        if ($lvprt >= 3) {
+            print_STDOUT("$mdle Archived current output to $dest_file\n", $istep, $kt);
+        }
     }
 }
 
@@ -737,4 +746,3 @@ sub adjust_phase {
     if ( $lvprt >= 3 ) { copy( "escalar.log", "../$DEBUG/." ) or die "Copy failed: $!"; }
 
 }
-
